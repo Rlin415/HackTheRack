@@ -30,7 +30,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: "./index.html" }
+      { from: "./src/client/index.html" }
     ])
   ]
 };

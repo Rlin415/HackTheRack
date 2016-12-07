@@ -6,7 +6,7 @@
   "scripts": {
     "wp": "webpack --progress --colors",
     "wp-server": "webpack-dev-server --content-base build/ --inline",
-    "start": "nodemon main.js"
+    "start": "nodemon src/main.js"
   },
   "repository": {
     "type": "git",

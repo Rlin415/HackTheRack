@@ -5,7 +5,7 @@ const SignUpForm = () => {
   let input: HTMLInputElement;
 
   function handleClick() {
-    fetch("/signup", {
+    fetch("/api/signup", {
       method: "POST",
       body: input.value
     });
