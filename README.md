@@ -1,1 +1,1 @@
-# new-items-notifier
+# HackTheRack
