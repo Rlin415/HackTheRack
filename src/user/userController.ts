@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import User from "./user";
 
-export const createUser = async (req: Request, res: Response, next: NextFunction) => {
+export const createUser = async (req: Request, res: Response, next: NextFunction): Promise<Response|void> => {
   const email = req.body.email;
   try {
     const user = await User.findOne({ email });
