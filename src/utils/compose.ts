@@ -1,5 +1,5 @@
 import { Express } from "express";
 
-export default (...funcs: Function[]): Function => (app: Express): Express => {
-  return funcs.reduce((res, func) => func(res), app) as Express;
-}
+export default (...funcs: Function[]): Function => (app: Express): Express => (
+  funcs.reduce((res: Express, func: Function) => func(res), app) as Express
+);
