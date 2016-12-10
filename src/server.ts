@@ -1,8 +1,5 @@
-import "./db";
 import * as express from "express";
-import apiRouter from "./config/apiRouter";
-import middlewares from "./config/middlewares";
-import settings from "./config/settings";
+import { middlewares, apiRouter, settings } from "./config";
 import compose from "./utils/compose";
 
 const build = compose(middlewares, apiRouter, settings);

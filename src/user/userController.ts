@@ -2,7 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import { findUser, makeUser } from "./userModel";
 
 export const createUser = async (req: Request, res: Response, next: NextFunction): Promise<Response|void> => {
-  const email = req.body.email;
+  const email: String = req.body.email;
   try {
     const user = await findUser(email);
     if (user) return res.sendStatus(409);

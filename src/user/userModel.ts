@@ -1,11 +1,4 @@
-import { dbUser } from '../db';
+import userDao from '../dao/UserDao';
 
-export const userSchema = {
-  email: {
-    type: String,
-    lowercase: true
-  }
-}
-
-export const findUser = (email: String) => dbUser.findOne({ email });
-export const makeUser = (email: String) => dbUser.create({ email });
+export const findUser = (email: String) => userDao.findOne(email);
+export const makeUser = (email: String) => userDao.create(email);
