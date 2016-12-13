@@ -1,6 +1,6 @@
 import { Express } from "express";
 import * as express from "express";
-import { createUser } from "../user/userController";
+import { createUser } from "../user";
 
 const apiRouter = (app: Express): Express => {
   const router = express.Router();
