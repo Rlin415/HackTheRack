@@ -1,30 +1,28 @@
-const retailSchema = {
-  name: String,
-  divisions: [
-    {
-      name: String,
-      departments: [
-        {
-          name: String,
-          classes: [
-            {
-              name: String,
-              sub_classes: [
-                {
-                  name: String,
-                  items: [
-                    {
-                      name: String
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
+export const itemSchema = {
+  name: String
+};
 
-export default retailSchema;
+export const subclassSchema = {
+  name: String,
+  items: [itemSchema]
+};
+
+export const classSchema = {
+  name: String,
+  subclass: [subclassSchema]
+};
+
+export const departmentSchema = {
+  name: String,
+  class: [classSchema]
+};
+
+export const divisionSchema = {
+  name: String,
+  departments: [departmentSchema]
+};
+
+export const retailSchema = {
+  name: String,
+  divisions: [divisionSchema]
+};
