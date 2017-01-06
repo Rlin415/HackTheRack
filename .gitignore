@@ -2,3 +2,4 @@ build/
 node_modules
 config.js
 query.js
+.DS_Store
