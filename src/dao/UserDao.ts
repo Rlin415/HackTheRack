@@ -1,4 +1,4 @@
-import { dbUser } from '../db';
+import { User } from '../db';
 
 interface UserDao {
   findOne(email: String): any;
@@ -6,8 +6,8 @@ interface UserDao {
 }
 
 const userDao: UserDao = {
-  findOne: (email: String) => dbUser.findOne({ email }),
-  create: (email: String) => dbUser.create({ email })
+  findOne: (email: String) => User.findOne({ email }),
+  create: (email: String) => User.create({ email })
 }
 
 export default userDao;

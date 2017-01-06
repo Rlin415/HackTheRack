@@ -1,11 +1,11 @@
-import { dbRetail } from '../db';
+import { Retail } from '../db';
 
 interface RetailDao {
-  findItemsBySubClass(subclass: String): any;
+  findItems(name: String): any;
 }
 
 const retailDao: RetailDao = {
-  findItemsBySubClass: (subclass: String) => dbRetail.find({'departments.classes.subclasses': subclass})
+  findItems: (name: String) => Retail.find({ name })
 }
 
 export default retailDao;

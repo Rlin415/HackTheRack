@@ -1,7 +1,4 @@
-import * as mongoose from "mongoose";
-import dbUser from './dbUser';
-import dbRetail from './dbRetail';
+import User from './User';
+import Retail from './Retail';
 
-mongoose.connect('mongodb://localhost/hackTheRack');
-
-export { dbRetail, dbUser };
+export { Retail, User };
